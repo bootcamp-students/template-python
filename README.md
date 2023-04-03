@@ -19,7 +19,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-Next, add the middleware classes to listen in on server responses. Middleware classes hook on Django’s request/response processing. You can think of it as a plugin system to modify Django’s input or output.
+Next, add the middleware classes to listen in on server responses. Middleware classes hook on Django’s request/response processing. You can think of it as a plugin system to modify Django’s input or output. Make sure to put the corsheaders middleware BEFORE the already present django.CommonMiddleware.
 
 ```python
 MIDDLEWARE = [
